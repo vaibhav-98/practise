@@ -18,23 +18,18 @@ function createPromise () {
 }
 
 console.log("start");
-let x = createPromise()
+let x  = createPromise ()
 console.log("got a new promise");
 
-x.then( function fn(){
-    console.log("promise Done");
+x.then( function f(){
+    console.log("promise done");
 })
 
 console.log("end");
 
-
-for(let i=0 ; i< 5; i++){
-    console.log("inside loop");
+for (let i = 0; i < 100; i++) {
+    
+    
 }
-
-
-
-
-
 
 
