@@ -4,23 +4,23 @@
 //Inside async function you  use 'await' keyword to pause the execution untill the promise resolve or rejected.
 
 
- function createPromise () {
+function createPromise () {
+    return new Promise ( function exec  ( resolve , reject) {
 
-    return new Promise( function exec(resolve, reject) {
-
-        setTimeout( function f(){
+        setTimeout ( function f() {
             console.log("timer done");
             resolve("done")
         })
     })
 }
 
-async function consume () {
-    console.log("inside function");
-    const response = await createPromise ()
-    console.log("respone is :" , response);
+async function consum () {
+    console.log("inside async fun");
+    let response =  await createPromise ()
+    console.log("response is : " , response);
 }
 
 console.log("start");
-consume()
+consum()
 console.log("end");
+
