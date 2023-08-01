@@ -6,30 +6,24 @@
 //2.Rejected 
 //3.fullfielled
 
-
 function createPromise () {
-    return new Promise( function exec (resolve, reject) {
+    return new Promise ( function exec (resolve , reject)  {
 
-        setTimeout( function f() {
+        setTimeout( function f(){
             console.log("timer done");
             resolve("done")
-        })
+        },3000)
     })
 }
 
 console.log("start");
-let x  = createPromise ()
-console.log("got a new promise");
-
-x.then( function f(){
+let x = createPromise()
+console.log("got new promise");
+x.then( function fn(){
     console.log("promise done");
 })
-
 console.log("end");
 
-for (let i = 0; i < 100; i++) {
-    
-    
+for(let x=0 ; x<100000; x++) {
+
 }
-
-
